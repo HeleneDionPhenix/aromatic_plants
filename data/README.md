@@ -28,7 +28,7 @@ The file *data/exp/0-data_sample.csv* give information about each sample of the 
 | type | Sample type | [nest: nest material sample, plant: fresh aromatic plant sample, ctrl_ext: negative extraction control, ctrl_PCR_neg: negative PCR control, ctrl_PCR_pos: positive PCR control - mock community] |
 | nichoir | Nest box identifier | (ex: ari11) |
 | pot | Fake nest box identifier | (ex: 15) unique in each temporal block |
-| traitement | plant addition treatment | Single species treatment (ach: *Achillea ligustica*, pul: *Pulicaria odorata*, men: *Mentha suaveolens insularis*, lav: *Lavandula stoechas*, imm: *Helichrysum italicum*) Two species treatment: (lavmen: *Lavandula* & *Mentha*, lavimm: *Lavandula* & *Helichrysum*, immmen: *Helichrysum* & *Mentha*), control treatment: (ctrl: no plant addition) |
+| traitement | plant addition treatment | Single species treatment [ach: *Achillea ligustica*, pul: *Pulicaria odorata*, men: *Mentha suaveolens insularis*, lav: *Lavandula stoechas*, imm: *Helichrysum italicum*], two species treatment: [lavmen: *Lavandula* & *Mentha*, lavimm: *Lavandula* & *Helichrysum*, immmen: *Helichrysum* & *Mentha*], control treatment: [ctrl: no plant addition] |
 | mass_1sp | Mass of plant added of one species at day 1, 3, and 5 (g) | (ex: 0.408) same as mass_tot for single species treatment |
 | mass_tot | Total mass of plant added at day 1, 3, and 5 (g) | (ex: 0.816) represented one third of the sample mass |
 | category | Sample type (broader category) | [ech: nest or plant sample, ctrl: control samples] |
