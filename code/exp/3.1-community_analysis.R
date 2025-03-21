@@ -104,7 +104,7 @@ mod.trt
 p.value.trt <- anova(mod.trt)
 p.value.trt <- p.value.trt$`Pr(>F)`[1]
 RsquareAdj(mod.trt)
-perm.adj.trt
+perm.trt.adj
 
 # Save environment --------------------------------------------------------
 

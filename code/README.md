@@ -1,4 +1,4 @@
-# Aromatic plants - Data
+# Aromatic plants - Code
 
 The code files are numbered and can be run sequentially, starting with the raw data, or any specific code can be run independently using intermediate *RData* objects.
 

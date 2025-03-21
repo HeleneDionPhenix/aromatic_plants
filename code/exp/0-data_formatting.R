@@ -60,3 +60,4 @@ rownames(data) <- data$sample.names
 # Export data -------------------------------------------------------------
 
 save.image("data/exp/0-data.RData")
+
