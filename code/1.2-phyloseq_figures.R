@@ -36,11 +36,11 @@ load("data/obs/1-phyloseq_objects_eggshell.RData")
 set.seed(11)
 
 
-# SECTION 1 ---------------------------------------------------------------
+# SECTION 2 ---------------------------------------------------------------
 
 # Rarefaction figures ---------------------------------------------------------
 
-## Fig. S1.1a. Experimental - Nest and Plant ------------------------------------
+## Fig. S2.1a. Experimental - Nest and Plant ------------------------------------
 
 #create ggplot2 object for rarecurves
 rc.exp <- rarecurve(comm.exp, 
@@ -91,7 +91,7 @@ p.exp <- ggplot(rc.exp,
         plot.title = element_text(size = 11, face = "bold"))
 p.exp
 
-## Fig. S1.1b. Observational - Nest --------------------------------------------
+## Fig. S2.1b. Observational - Nest --------------------------------------------
 
 #create ggplot2 object for rarecurves
 rc.nest <- rarecurve(comm.nest, 
@@ -147,7 +147,7 @@ p.nest <- ggplot(rc.nest,
 
 p.nest
 
-## Fig. S1.1c. Observational - Eggshell ---------------------------------------
+## Fig. S2.1c. Observational - Eggshell ---------------------------------------
 
 #create ggplot2 object for rarecurves
 rc.eggshell <- rarecurve(comm.eggshell, 
@@ -242,7 +242,7 @@ p.eggshell <- ggplot(rc.eggshell,
         plot.title = element_text(size = 11, face = "bold"))
 p.eggshell
 
-## Fig. S1.1. Composite figure --------------------------------------------------------
+## Fig. S2.1. Composite figure --------------------------------------------------------
 
 p.rc <- ggarrange(p.exp, legend, p.nest, p.eggshell,
                   nrow = 2, ncol = 2,
@@ -251,7 +251,7 @@ p.rc <- ggarrange(p.exp, legend, p.nest, p.eggshell,
 p.rc
 
 ggsave(
-  "figure/Figure_S1.1.png",
+  "figure/Figure_S2.1.png",
   p.rc,
   width = 18,
   height = 18,
@@ -262,7 +262,7 @@ ggsave(
 
 # Extraction and field controls compare to samples -----------------------------
 
-## Fig. S1.2. Experimental approach --------------------------------------------
+## Fig. S2.2. Experimental approach --------------------------------------------
 
 # select only nest and plant samples and calculate the mean composition
 ps.exp.comp <- subset_samples(ps.exp, 
@@ -351,13 +351,13 @@ p.ext.comp <- ggarrange(p.bp.exp.comp1, p.bp.exp.comp2,
                    widths = c(15,20))
 p.ext.comp
 
-ggsave("figure/Figure_S1.2.png",
+ggsave("figure/Figure_S2.2.png",
        p.ext.comp,
        dpi = 300,
        width = 10,
        height = 12)
 
-## Fig. S1.3. Observational - Nest --------------------------------------------
+## Fig. S2.3. Observational - Nest --------------------------------------------
 
 table(mdata.nest$type)
 table(mdata.nest$categorie)
@@ -453,13 +453,13 @@ p.ext <- ggarrange(p.bp.nest.1, p.bp.nest.2,
                    widths = c(15,20))
 p.ext
 
-ggsave("figure/Figure_S1.3.png",
+ggsave("figure/Figure_S2.3.png",
        p.ext,
        dpi = 300,
        width = 10,
        height = 10)
 
-## Fig. S1.4. Observational - Eggshell ----------------------------------------
+## Fig. S2.4. Observational - Eggshell ----------------------------------------
 
 table(mdata.eggshell$type)
 
@@ -548,14 +548,14 @@ p.egg <- ggarrange(p.bp.egg.1, p.bp.egg.2,
                    widths = c(15,25))
 p.egg
 
-ggsave("figure/Figure_S1.4.png",
+ggsave("figure/Figure_S2.4.png",
        p.egg,
        dpi = 300,
        width = 10,
        height = 10)
 
 
-## Fig. S1.5. Eggshell composition comparison ---------------------------------
+## Fig. S2.5. Eggshell composition comparison ---------------------------------
 
 mdata.egg.neg <- filter(mdata.eggshell, type != "PCR_ctrl")
 comm.egg.neg <- comm.eggshell[rownames(mdata.egg.neg),]
@@ -631,7 +631,7 @@ p <- ggplot(data.egg.neg, aes(x = CAP1, y = MDS1,
 
 p
 
-ggsave("figure/Figure_S1.5.png",
+ggsave("figure/Figure_S2.5.png",
        p,
        width = 9.5,
        height = 7,
@@ -650,7 +650,7 @@ ggsave("figure/Figure_S1.5.png",
 # Salmonella enterica - 12%
 # Staphylococcus aureus - 12%
 
-## Fig. S1.6. Experimental --------------------------------------------------
+## Fig. S2.6. Experimental --------------------------------------------------
 
 ### c. Absolute ----------------------------------------------------------------
 
@@ -760,7 +760,7 @@ p.pcr.all.exp <- ggarrange(p.neg, p.pos, p.pcr,
                            widths = c(2,2,6),
                            labels = c("a", "b", "c"))
 
-## Fig. S1.6. Observational --------------------------------------------------
+## Fig. S2.6. Observational --------------------------------------------------
 
 ### f. Absolute ----------------------------------------------------------------
 
@@ -890,7 +890,7 @@ p.pcr.all.obs <- ggarrange(p.neg, p.pos, p.pcr,
 
 p.pcr.all.obs
 
-## Fig. S1.6. Composite figure --------------------------------------
+## Fig. S2.6. Composite figure --------------------------------------
 
 # Create treatment labels
 empty <- data.frame(x = 0,
@@ -934,18 +934,18 @@ p.pcr.all <- ggarrange(lab.exp,
                        heights = c(1,10,1,10))
 p.pcr.all
 
-ggsave("figure/Figure_S1.6.png",
+ggsave("figure/Figure_S2.6.png",
        p.pcr.all,
        dpi = 300,
        width = 15,
        height = 10)
 
 
-# SECTION 2 ---------------------------------------------------------------
+# SECTION 3 ---------------------------------------------------------------
 
 # Composition - comparison between groups ---------------------------------
 
-## Fig. S2.1. Experimental approach ----------------------------------------
+## Fig. S3.1. Experimental approach ----------------------------------------
 
 # Combine nest samples and plant samples (rarefied)
 ps.exp.sub <- merge_phyloseq(ps.exp.nest, ps.plant)
@@ -1032,7 +1032,7 @@ bp.sample.exp <- ggarrange(p.lab, bp.sample.exp.1 ,
 bp.sample.exp
 
 ggsave(
-  "figure/Figure_S2.1.png",
+  "figure/Figure_S3.1.png",
   bp.sample.exp,
   width = 32,
   height = 18,
@@ -1041,7 +1041,7 @@ ggsave(
 )
 
 
-## Fig. S2.3a. Observational - Nest ----------------------------------------
+## Fig. S3.3a. Observational - Nest ----------------------------------------
 
 # load metadata
 load("data/obs/0-data.RData")
@@ -1130,7 +1130,7 @@ bp.obs.nest <- ggarrange(p.lab, bp.obs.nest.1 ,
                            widths = c(1,30))
 bp.obs.nest
 
-## Fig. S2.3b. Observational - Eggshell ---------------------------------------
+## Fig. S3.3b. Observational - Eggshell ---------------------------------------
 
 # add data to phyloseq object
 data.eggshell.r <- filter(compo.stage, id %in% sample_names(ps.eggshell.r))
@@ -1201,7 +1201,7 @@ bp.obs <- ggarrange(bp.obs.nest, bp.obs.egg,
 bp.obs
 
 ggsave(
-  "figure/Figure_S2.3.png",
+  "figure/Figure_S3.3.png",
   bp.obs,
   width = 35,
   height = 18,

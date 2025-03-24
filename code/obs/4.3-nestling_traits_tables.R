@@ -144,5 +144,5 @@ tab.f <- flextable(tab.pcoa) %>%
 tab.f
 
 save_as_docx(
-  "Table S3.4" = tab.f,
-  path = "table/Table_S3.4.docx")
+  "Table S4.4" = tab.f,
+  path = "table/Table_S4.4.docx")

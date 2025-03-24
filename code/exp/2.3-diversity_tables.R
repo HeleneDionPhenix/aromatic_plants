@@ -118,5 +118,5 @@ flex.trt
 
 
 save_as_docx(
-  "Table S3.1" = flex.trt,
-  path = "table/Table_S3.1.docx")
+  "Table S4.1" = flex.trt,
+  path = "table/Table_S4.1.docx")

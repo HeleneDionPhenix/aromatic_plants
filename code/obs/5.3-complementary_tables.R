@@ -91,8 +91,8 @@ flex.devel <- flex.devel %>%
 flex.devel
 
 save_as_docx(
-  "Table S4.1" = flex.devel,
-  path = "table/Table_S4.1.docx")
+  "Table S5.1" = flex.devel,
+  path = "table/Table_S5.1.docx")
 
 # Table S4.2. Aromatic plant quantity ~ hatching date ----------------------
 
@@ -150,8 +150,8 @@ flex.aro <- flex.aro %>%
 flex.aro
 
 save_as_docx(
-  "Table S4.2" = flex.aro,
-  path = "table/Table_S4.2.docx")
+  "Table S5.2" = flex.aro,
+  path = "table/Table_S5.2.docx")
 
 # Table S4.3. Fledging success over the years ------------------------------
 
@@ -232,5 +232,5 @@ tab.f <- flextable(tab.fledg) %>%
 tab.f
 
 save_as_docx(
-  "Table S4.3" = tab.f,
-  path = "table/Table_S4.3.docx")
+  "Table S5.3" = tab.f,
+  path = "table/Table_S5.3.docx")

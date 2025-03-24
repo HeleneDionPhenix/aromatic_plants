@@ -141,7 +141,7 @@ p1 <- ggarrange(p.pop, p.devel,
                 labels = c("A", "B"))
 p1
 
-ggsave("figure/Figure_S4.1.png",
+ggsave("figure/Figure_S5.1.png",
        p1,
        width = 23,
        height = 10,
@@ -225,7 +225,7 @@ p.aro <- ggplot(data = newdat,
 
 p.aro
 
-ggsave("figure/Figure_S4.2.png",
+ggsave("figure/Figure_S5.2.png",
        p.aro,
        width = 15,
        height = 10,
@@ -289,14 +289,14 @@ p.fledg <- ggplot(newdat,
                                 "EPirio" = "forestgreen"))+
   xlab("Year")+
   ylab("Fledging success (%)")+
-  theme_pubclean()+
+  theme_pubclean(basse_family = "Times New Roman")+
   theme(legend.position = "none")
 
 
 p.fledg  
 
 ggsave(
-  "figure/Figure_S4.3.png",
+  "figure/Figure_S5.3.png",
   p.fledg,
   width = 25,
   height = 10,

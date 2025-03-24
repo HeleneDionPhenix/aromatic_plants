@@ -93,5 +93,5 @@ tab.f <- flextable(tab) %>%
 tab.f
 
 save_as_docx(
-  "Table S2.1" = tab.f,
-  path = "table/Table_S2.1.docx")
+  "Table S3.1" = tab.f,
+  path = "table/Table_S3.1.docx")

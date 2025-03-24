@@ -136,8 +136,8 @@ tab.f <- flextable(tab.shannon) %>%
 tab.f
 
 save_as_docx(
-  "Table S3.2" = tab.f,
-  path = "table/Table_S3.2.docx")
+  "Table S4.2" = tab.f,
+  path = "table/Table_S4.2.docx")
 
 # Amount of aromatic plant between pop ------------------------------------
 
@@ -211,6 +211,6 @@ tab.f <- flextable(tab.aro.pop) %>%
 tab.f
 
 save_as_docx(
-  "Table S3.3" = tab.f,
-  path = "table/Table_S3.3.docx")
+  "Table S4.3" = tab.f,
+  path = "table/Table_S4.3.docx")
 
