@@ -87,18 +87,18 @@ This repository contains R scripts for testing the effect of aromatic plants on 
 │&nbsp; &nbsp; &nbsp; |─ Figure_4.png <br>
 │&nbsp; &nbsp; &nbsp; |─ Figure_5.png <br>
 │&nbsp; &nbsp; &nbsp; |─ Figure_6.png <br>
-│&nbsp; &nbsp; &nbsp; |─ Figure_S1.1.png <br>
-│&nbsp; &nbsp; &nbsp; |─ Figure_S1.2.png <br>
-│&nbsp; &nbsp; &nbsp; |─ Figure_S1.3.png <br>
-│&nbsp; &nbsp; &nbsp; |─ Figure_S1.4.png <br>
-│&nbsp; &nbsp; &nbsp; |─ Figure_S1.5.png <br>
-│&nbsp; &nbsp; &nbsp; |─ Figure_S1.6.png <br>
 │&nbsp; &nbsp; &nbsp; |─ Figure_S2.1.png <br>
 │&nbsp; &nbsp; &nbsp; |─ Figure_S2.2.png <br>
 │&nbsp; &nbsp; &nbsp; |─ Figure_S2.3.png <br>
-│&nbsp; &nbsp; &nbsp; |─ Figure_S4.1.png <br>
-│&nbsp; &nbsp; &nbsp; |─ Figure_S4.2.png <br>
-│&nbsp; &nbsp; &nbsp; |─ Figure_S4.3.png <br>
+│&nbsp; &nbsp; &nbsp; |─ Figure_S2.4.png <br>
+│&nbsp; &nbsp; &nbsp; |─ Figure_S2.5.png <br>
+│&nbsp; &nbsp; &nbsp; |─ Figure_S2.6.png <br>
+│&nbsp; &nbsp; &nbsp; |─ Figure_S3.1.png <br>
+│&nbsp; &nbsp; &nbsp; |─ Figure_S3.2.png <br>
+│&nbsp; &nbsp; &nbsp; |─ Figure_S3.3.png <br>
+│&nbsp; &nbsp; &nbsp; |─ Figure_S5.1.png <br>
+│&nbsp; &nbsp; &nbsp; |─ Figure_S5.2.png <br>
+│&nbsp; &nbsp; &nbsp; |─ Figure_S5.3.png <br>
 |─ table <br>
 │&nbsp; &nbsp; &nbsp; |─ Table_2_formatted.docx <br>
 │&nbsp; &nbsp; &nbsp; |─ Table_2.docx <br>
@@ -108,22 +108,22 @@ This repository contains R scripts for testing the effect of aromatic plants on 
 │&nbsp; &nbsp; &nbsp; |─ Table_4.docx <br>
 │&nbsp; &nbsp; &nbsp; |─ Table_5_formatted.docx <br>
 │&nbsp; &nbsp; &nbsp; |─ Table_5.docx <br>
-│&nbsp; &nbsp; &nbsp; |─ Table_S2.1_formatted.docx <br>
-│&nbsp; &nbsp; &nbsp; |─ Table_S2.1.docx <br>
 │&nbsp; &nbsp; &nbsp; |─ Table_S3.1_formatted.docx <br>
 │&nbsp; &nbsp; &nbsp; |─ Table_S3.1.docx <br>
-│&nbsp; &nbsp; &nbsp; |─ Table_S3.2_formatted.docx <br>
-│&nbsp; &nbsp; &nbsp; |─ Table_S3.2.docx <br>
-│&nbsp; &nbsp; &nbsp; |─ Table_S3.3_formatted.docx <br>
-│&nbsp; &nbsp; &nbsp; |─ Table_S3.3.docx <br>
-│&nbsp; &nbsp; &nbsp; |─ Table_S3.4_formatted.docx <br>
-│&nbsp; &nbsp; &nbsp; |─ Table_S3.4.docx <br>
 │&nbsp; &nbsp; &nbsp; |─ Table_S4.1_formatted.docx <br>
 │&nbsp; &nbsp; &nbsp; |─ Table_S4.1.docx <br>
 │&nbsp; &nbsp; &nbsp; |─ Table_S4.2_formatted.docx <br>
 │&nbsp; &nbsp; &nbsp; |─ Table_S4.2.docx <br>
 │&nbsp; &nbsp; &nbsp; |─ Table_S4.3_formatted.docx <br>
 │&nbsp; &nbsp; &nbsp; |─ Table_S4.3.docx <br>
+│&nbsp; &nbsp; &nbsp; |─ Table_S4.4_formatted.docx <br>
+│&nbsp; &nbsp; &nbsp; |─ Table_S4.4.docx <br>
+│&nbsp; &nbsp; &nbsp; |─ Table_S5.1_formatted.docx <br>
+│&nbsp; &nbsp; &nbsp; |─ Table_S5.1.docx <br>
+│&nbsp; &nbsp; &nbsp; |─ Table_S5.2_formatted.docx <br>
+│&nbsp; &nbsp; &nbsp; |─ Table_S5.2.docx <br>
+│&nbsp; &nbsp; &nbsp; |─ Table_S5.3_formatted.docx <br>
+│&nbsp; &nbsp; &nbsp; |─ Table_S5.3.docx <br>
 
     
 *The folder data/exp/bioinfo/fastq, data/obs/bioinfo/fastq, and data/SILVA138.1 need to be added to the directory where specified above to run codes code/exp/0-dada2.R, code/obs/0-dada2_eggshell.R, and code/obs/0-dada2_nest.R*
