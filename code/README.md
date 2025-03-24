@@ -12,7 +12,7 @@ Creation of rarefaction curves and visual comparison of bacterial composition be
 
 Creation of a table of nest repeatability for bacterial diversity and composition from the experimental and observational studies, and for the quantity of aromatic plants female bring to the nest. This table reported the adjusted and non-adjusted repeatability for the random effect "nest" from the models created in the following codes: exp/2.1-diversity_analysis.R, exp/3.1-community_analysis.R, obs/2.1-diversity_analysis.R, and obs/3.1-community_analysis.R.
 
-### exp
+### code/exp/
 
 #### 0-dada2.R
 
@@ -53,7 +53,7 @@ Representation of the model created in the exp/3.1-community_analysis.R script v
 
 Proportion (adjusted) of the total variation in the composition among nest samples explained by plant addition and plant species, both in interaction with phenological stage and among nest of origin.
 
-### obs
+### code/obs/
 
 #### 0-dada2_eggshell.R
 #### 0-dada2_nest.R
