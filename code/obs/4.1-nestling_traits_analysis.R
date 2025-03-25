@@ -91,7 +91,7 @@ pcoa
 plot(pcoa$CA$eig/sum(pcoa$CA$eig))
 plot(pcoa, type="text", scaling = 2)
 
-# Model axis 1 ------------------------------------------------------------
+# Model 8 -----------------------------------------------------------------
 
 #set reference level
 data.cond$pop <- relevel(data.cond$pop, ref = "DMuro")
@@ -123,7 +123,7 @@ rpt.1.adj <- rptGaussian(pcoa1 ~ pop*ARO.s +
                      data = data.cond,
                      nboot = 100, npermut = 0, ratio = TRUE, adjusted = T)
 
-# Model axis 2 ------------------------------------------------------------
+# Model 9 ---------------------------------------------------------------------
 
 data.cond$pcoa2 <- scores(pcoa, 
                           choices = c(2), 

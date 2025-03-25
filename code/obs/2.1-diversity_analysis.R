@@ -49,7 +49,7 @@ hist(log(compo.stage$ARO + 1))
 compo.stage$ARO.log <- log(compo.stage$ARO + 1)
 compo.stage$ARO.s <- scale(compo.stage$ARO.log)[,1]
 
-## Models ------------------------------------------------------------------
+## Model 3 ------------------------------------------------------------------
 
 # Set reference levels
 compo.stage$stade <- relevel(compo.stage$stade, ref = "elevage")
@@ -96,7 +96,7 @@ hist(log(compo.incu$ARO + 1))
 compo.incu$ARO.log <- log(compo.incu$ARO + 1)
 compo.incu$ARO.s <- scale(compo.incu$ARO.log)[,1]
 
-## Models ------------------------------------------------------------------
+## Model 4 ------------------------------------------------------------------
 
 # set reference levels
 compo.incu$pop <- relevel(compo.incu$pop, ref = "EPirio")
@@ -120,7 +120,7 @@ hist(log(compo$ARO + 1))
 compo$ARO.log <- log(compo$ARO + 1)
 
 
-## Model -------------------------------------------------------------------
+## Model 5 -------------------------------------------------------------------
 
 # set reference levels
 compo$pop <- relevel(compo$pop, ref = "DMuro")

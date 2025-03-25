@@ -246,7 +246,7 @@ p.eggshell
 
 p.rc <- ggarrange(p.exp, legend, p.nest, p.eggshell,
                   nrow = 2, ncol = 2,
-                  labels = c("a", "", "b", "c"))
+                  labels = c("A", "", "B", "C"))
 
 p.rc
 
@@ -605,16 +605,16 @@ p <- ggplot(data.egg.neg, aes(x = CAP1, y = MDS1,
                          sep = ""),
            family = "Times New Roman",
            size = 5)+
-  scale_shape_manual(name = "",
-                     labels = c(swab = "Eggshell sample",
-                                ctrl = "Negative control"),
-                     values = c(swab = 21,
-                                ctrl = 22)) +
   scale_fill_manual(name = "",
                     labels = c(swab = "Eggshell sample",
                                ctrl = "Negative control"),
                     values = c(swab = "black",
                                ctrl = "red")) +
+  scale_shape_manual(name = "",
+                     labels = c(swab = "Eggshell sample",
+                                ctrl = "Negative control"),
+                     values = c(swab = 21,
+                                ctrl = 22)) +
   xlab(paste("RDA 1 (", perc[1], "%)", sep = "")) + 
   ylab(paste("MDS 1 (", perc[2], "%)", sep = "")) + 
   theme_bw(base_size = 16,
@@ -624,9 +624,7 @@ p <- ggplot(data.egg.neg, aes(x = CAP1, y = MDS1,
         legend.text = element_text(size=14), 
         legend.key.height = unit(0.3, "cm"),
         legend.spacing.y = unit(0, 'cm'),
-        legend.background = element_rect(fill = "transparent"))+
-  guides(shape = guide_legend(override.aes = list(size =3)),
-         fill = guide_legend(override.aes = list(shape = 21, size =3)))
+        legend.background = element_rect(fill = "transparent"))
 
 
 p
@@ -758,7 +756,7 @@ p.neg
 p.pcr.all.exp <- ggarrange(p.neg, p.pos, p.pcr,
                            nrow = 1, ncol = 3,
                            widths = c(2,2,6),
-                           labels = c("a", "b", "c"))
+                           labels = c("A", "B", "C"))
 
 ## Fig. S2.6. Observational --------------------------------------------------
 
@@ -886,7 +884,7 @@ p.neg
 p.pcr.all.obs <- ggarrange(p.neg, p.pos, p.pcr,
                            nrow = 1, ncol = 3,
                            widths = c(2,2,6),
-                           labels = c("d", "e", "f"))
+                           labels = c("D", "E", "F"))
 
 p.pcr.all.obs
 
@@ -1197,7 +1195,7 @@ bp.obs.egg
 bp.obs <- ggarrange(bp.obs.nest, bp.obs.egg,
                     nrow = 1, ncol =2,
                     widths = c(30,20),
-                    labels = "auto")
+                    labels = c("A", "B"))
 bp.obs
 
 ggsave(

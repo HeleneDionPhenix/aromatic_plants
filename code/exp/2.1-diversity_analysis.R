@@ -37,7 +37,7 @@ data.nest$shannon <- vegan::diversity(comm.nest)
 # Distribution
 hist(data.nest$shannon, breaks = 20)
 
-# Models --------------------------------------------------------------
+# Model 1 --------------------------------------------------------------------
 
 # Set reference factors
 data.nest$traitement <- factor(data.nest$traitement,

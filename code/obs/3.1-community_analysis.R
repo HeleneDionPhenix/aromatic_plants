@@ -55,7 +55,7 @@ disper.nest.pop <- betadisper(dist.comm.nest, compo.stage$pop)
 anova(disper.nest.pop)
 plot(disper.nest.pop)
 
-## dbRDA -------------------------------------------------------------------
+## Model 6 - dbRDA ------------------------------------------------------------
 
 mod.nest <- capscale(comm.nest.r ~ ARO.s*pop*stade +
                       clutch,
@@ -89,7 +89,7 @@ disper.eggshell.pop <- betadisper(dist.comm.eggshell, compo.couv$pop)
 anova(disper.eggshell.pop)
 plot(disper.eggshell.pop)
 
-## dbRDA -------------------------------------------------------------------
+## Model 7 - dbRDA ------------------------------------------------------------
 
 mod.eggshell <- capscale(comm.eggshell.r ~ ARO.s*pop,
                     data = compo.couv,

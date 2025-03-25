@@ -37,8 +37,8 @@ newdat$lowci <- pred$fit - 1.96*pred$se.fit
 newdat$upperci <- pred$fit + 1.96*pred$se.fit
 
 rp <- range(data.cond[which(data.cond$pop == "EPirio"), "date_eclo.s"], na.rm=T)
-rm <- range(data.cond[which(data.cond$pop == "DMuro"), "date_eclo.s"])
-re <- range(data.cond[which(data.cond$pop == "EMuro"), "date_eclo.s"])
+rm <- range(data.cond[which(data.cond$pop == "DMuro"), "date_eclo.s"], na.rm=T)
+re <- range(data.cond[which(data.cond$pop == "EMuro"), "date_eclo.s"], na.rm=T)
 
 # Truncate and unscale by pop
 newdat.EP <- filter(newdat, pop == "EPirio")
@@ -49,12 +49,12 @@ newdat.EP$date_eclo <- newdat.EP$date_eclo.s * sd(data.cond.EP$date_eclo, na.rm=
 newdat.DM <- filter(newdat, pop == "DMuro")
 newdat.DM <- filter(newdat.DM, !(date_eclo.s < min(rm) | date_eclo.s > max(rm)))
 data.cond.DM <- filter(data.cond, pop == "DMuro") 
-newdat.DM$date_eclo <- newdat.DM$date_eclo.s * sd(data.cond.DM$date_eclo) + mean(data.cond.DM$date_eclo)
+newdat.DM$date_eclo <- newdat.DM$date_eclo.s * sd(data.cond.DM$date_eclo, na.rm=T) + mean(data.cond.DM$date_eclo, na.rm=T)
 
 newdat.EM <- filter(newdat, pop == "EMuro")
 newdat.EM <- filter(newdat.EM, !(date_eclo.s < min(re) | date_eclo.s > max(re)))
 data.cond.EM <- filter(data.cond, pop == "EMuro") 
-newdat.EM$date_eclo <- newdat.EM$date_eclo.s * sd(data.cond.EM$date_eclo) + mean(data.cond.EM$date_eclo)
+newdat.EM$date_eclo <- newdat.EM$date_eclo.s * sd(data.cond.EM$date_eclo, na.rm=T) + mean(data.cond.EM$date_eclo, na.rm=T)
 
 newdat <- rbind(newdat.EP, newdat.DM, newdat.EM)
 
@@ -73,6 +73,13 @@ p.devel <- ggplot(data = newdat,
                   fill = pop),
               alpha = 0.5)+
   geom_line(aes(color = pop)) +
+  annotate("text",
+           x = lubridate::as_date(155),
+           y = -2.5,
+           label = paste("R2=",
+                         round(rpt.devel$R$Fixed, 2),
+                         sep = ""),
+           family = "Times New Roman")+
   
   scale_color_manual(name = "Population",
                      labels = c(EMuro = "EMuro",
@@ -164,8 +171,8 @@ newdat$lowci <- pred$fit - 1.96*pred$se.fit
 newdat$upperci <- pred$fit + 1.96*pred$se.fit
 
 rp <- range(data.nest[which(data.nest$pop == "EPirio"), "date_eclo.s"], na.rm=T)
-rm <- range(data.nest[which(data.nest$pop == "DMuro"), "date_eclo.s"])
-re <- range(data.nest[which(data.nest$pop == "EMuro"), "date_eclo.s"])
+rm <- range(data.nest[which(data.nest$pop == "DMuro"), "date_eclo.s"], na.rm=T)
+re <- range(data.nest[which(data.nest$pop == "EMuro"), "date_eclo.s"], na.rm=T)
 
 
 # Truncate and unscale by pop
@@ -177,13 +184,13 @@ newdat.EP$date_eclo <- newdat.EP$date_eclo.s * sd(data.nest.EP$date_eclo, na.rm=
 newdat.DM <- filter(newdat, pop == "DMuro")
 newdat.DM <- filter(newdat.DM, !(date_eclo.s < min(rm) | date_eclo.s > max(rm)))
 data.nest.DM <- filter(data.nest, pop == "DMuro") 
-newdat.DM$date_eclo <- newdat.DM$date_eclo.s * sd(data.nest.DM$date_eclo) + mean(data.nest.DM$date_eclo)
+newdat.DM$date_eclo <- newdat.DM$date_eclo.s * sd(data.nest.DM$date_eclo, na.rm=T) + mean(data.nest.DM$date_eclo, na.rm=T)
 
 
 newdat.EM <- filter(newdat, pop == "EMuro")
 newdat.EM <- filter(newdat.EM, !(date_eclo.s < min(re) | date_eclo.s > max(re)))
 data.nest.EM <- filter(data.nest, pop == "EMuro") 
-newdat.EM$date_eclo <- newdat.EM$date_eclo.s * sd(data.nest.EM$date_eclo) + mean(data.nest.EM$date_eclo)
+newdat.EM$date_eclo <- newdat.EM$date_eclo.s * sd(data.nest.EM$date_eclo, na.rm=T) + mean(data.nest.EM$date_eclo, na.rm=T)
 
 newdat <- rbind(newdat.EP, newdat.DM, newdat.EM)
 
@@ -203,6 +210,13 @@ p.aro <- ggplot(data = newdat,
                   fill = pop),
               alpha = 0.5)+
   geom_line(aes(color = pop)) +
+  annotate("text",
+           x = lubridate::as_date(155),
+           y = 3.5,
+           label = paste("R2=",
+                         round(summary(mod.aro)$adj.r.squared, 2),
+                         sep = ""),
+           family = "Times New Roman")+
   
   scale_color_manual(name = "Population",
                      labels = c(EMuro = "EMuro",
@@ -289,7 +303,8 @@ p.fledg <- ggplot(newdat,
                                 "EPirio" = "forestgreen"))+
   xlab("Year")+
   ylab("Fledging success (%)")+
-  theme_pubclean(basse_family = "Times New Roman")+
+  theme_pubclean(base_size = 16,
+                 base_family = "Times New Roman")+
   theme(legend.position = "none")
 
 

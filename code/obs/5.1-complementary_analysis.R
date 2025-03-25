@@ -68,7 +68,7 @@ data.cond <-
   mutate(date_eclo.s = scale_this(date_eclo))
 rm(scale_this)
 
-# Developmental index ~ hatching date --------------------------------
+# Model S5.1 - Developmental index ~ hatching date ----------------------------
 
 hist(data.cond$devel)
 
@@ -95,7 +95,7 @@ rpt.devel.adj <- rptGaussian(devel ~ date_eclo.s+pop +
                          data = data.cond,
                          nboot = 100, npermut = 0, ratio = T, adjusted = T)
 
-# Aromatic plant quantity ~ hatching date ----------------------------
+# Model S5.2 - Aromatic plant quantity ~ hatching date ------------------------
 
 data.nest <- select(data.cond,
                     ARO.log, ARO.s, date_eclo.s, date_eclo, pop)
@@ -113,7 +113,7 @@ plot(allEffects(mod.aro))
 confint.aro <- confint.lm(mod.aro)
 
 
-# Fledging success over the years ---------------------------------
+# Model S5.3 - Fledging success over the years ------------------------------
 
 ## Import data -------------------------------------------------------------
 
@@ -131,7 +131,7 @@ mod.fledg <- glm(cbind(pulenv,echec_fledg) ~ pop*an,
 summary(mod.fledg)
 plot(allEffects(mod.fledg))
 
-#mean over last 20 years
+# Model S5.4 - Mean fledging success in the last 20 years ---------------------
 
 mod.fledg.m <- glm(cbind(pulenv,echec_fledg) ~ pop,
                    data = data.fledg,

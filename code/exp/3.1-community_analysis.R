@@ -32,7 +32,7 @@ disper.plant <- betadisper(dist.plant, data.plant$traitement)
 anova(disper.plant)
 plot(disper.plant)
 
-## dbRDA -------------------------------------------------------------------
+## Model S3.1 - dbRDA -------------------------------------------------------
 
 mod.pl <- capscale(comm.plant ~ traitement,
                    data = data.plant,
@@ -85,7 +85,7 @@ disper.stage <- betadisper(dist.nest, data.nest$stage_pheno)
 anova(disper.stage)
 plot(disper.stage, label = T)
 
-# Model -------------------------------------------------------------------
+# Model 2 - dbRDA -------------------------------------------------------------
 
 mod.trt <- capscale(comm.nest ~ trtctrl*stage_pheno + 
                       traitement*stage_pheno + 
