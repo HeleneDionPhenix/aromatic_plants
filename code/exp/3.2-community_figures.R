@@ -213,6 +213,6 @@ p
 
 ggsave("figure/Figure_3.png",
        p,
-       width = 9,
+       width = 8.5,
        height = 7,
        dpi = 300)

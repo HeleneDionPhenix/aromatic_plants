@@ -42,7 +42,7 @@ p.pcoa <- ggplot(data.cond, aes(x = -MDS1, y = MDS2)) +
   #nestlings
   geom_point(aes(color = pop),
              alpha = 0.5, 
-             size = 1.5)+
+             size = 2.5)+
   
   #traits
   geom_segment(data = traits,
@@ -61,7 +61,7 @@ p.pcoa <- ggplot(data.cond, aes(x = -MDS1, y = MDS2)) +
                 label = lab),
             hjust= c(0.3, 0.4, 0.6, 0.6), 
             vjust= c(-1, 1.4, -0.6, 0.6), 
-            size=4,
+            size=7,
             color = "black",
             family = "Times New Roman") +
   
@@ -75,16 +75,17 @@ p.pcoa <- ggplot(data.cond, aes(x = -MDS1, y = MDS2)) +
   annotate("text",
            x = 1.5,
            y = -1.4,
+           size = 7,
            label = "n=1149",
            family = "Times New Roman") +
 
   xlim(-1.5,1.7)+
   xlab(paste("PCoA 1 (", perc[1], "%)", sEM = "")) + 
   ylab(paste("PCoA 2 (", perc[2], "%)", sEM = "")) + 
-  theme_bw(base_size = 12,
+  theme_bw(base_size = 20,
            base_family = "Times New Roman")+
   theme(legend.position = c(0.90,0.90),
-        legend.text = element_text(size=13), 
+        legend.text = element_text(size=20), 
         legend.key.height = unit(0.3, "cm"), 
         legend.background = element_rect(fill = "transparent"))
 
@@ -129,7 +130,7 @@ p.1 <- ggplot(data = pred.1,
                  y = -MDS1,
                  color = pop),
              alpha = 0.5,
-             size = 1.5) +
+             size = 2) +
   
   geom_ribbon(aes(x = ARO.log,
                   y = pcoa1,
@@ -167,6 +168,7 @@ p.1 <- ggplot(data = pred.1,
   annotate("text",
            x = 3.3,
            y = -1.4,
+           size = 7,
            label = paste("R2=", 
                          round(rpt.1$R$Fixed, 2),
                          sep = ""),
@@ -175,11 +177,11 @@ p.1 <- ggplot(data = pred.1,
   ylab("PCoA 1 score") + 
   xlab("Aromatic plant (log(%))") + 
   
-  theme_bw(base_size = 12,
+  theme_bw(base_size = 20,
            base_family = "Times New Roman") +
-  theme(plot.title = element_text(size = 12, face = "bold"),
+  theme(plot.title = element_text(size = 20, face = "bold"),
         legend.position = "none",
-        legend.text = element_text(size=12), 
+        legend.text = element_text(size=20), 
         legend.key.height = unit(0.3, "cm"), 
         legend.background = element_rect(fill = "transparent"))
 p.1  
@@ -212,7 +214,7 @@ p.1.leg <- ggplot(empty, aes(x=x, y=y))+
   geom_text(aes(x = c(0.15, 0.65),
                 y = c(0.5,0.5),
                 label = lab),
-            size=4,
+            size=7,
             color = "black",
             angle = 90,
             family = "Times New Roman") +
@@ -262,7 +264,7 @@ p.2 <- ggplot(data = pred.2,
                  y = MDS2,
                  color = pop),
              alpha = 0.5,
-             size = 1.5) +
+             size = 2) +
   
   geom_ribbon(aes(x = ARO.log,
                   y = pcoa2,
@@ -300,6 +302,7 @@ p.2 <- ggplot(data = pred.2,
   annotate("text",
            x = 3.3,
            y = -0.7,
+           size = 7,
            label = paste("R2=", 
                          round(rpt.2$R$Fixed, 2),
                          sep = ""),
@@ -307,12 +310,12 @@ p.2 <- ggplot(data = pred.2,
   ylab("PCoA 2 score") + 
   xlab("Aromatic plant (log(%))") + 
   
-  theme_bw(base_size = 12,
+  theme_bw(base_size = 20,
            base_family = "Times New Roman") +
-  theme(plot.title = element_text(size = 12, face = "bold"),
+  theme(plot.title = element_text(size = 20, face = "bold"),
         #legend.position= c(0.20,0.25), 
         legend.position = "none",
-        legend.text = element_text(size=12), 
+        legend.text = element_text(size=20), 
         legend.key.height = unit(0.3, "cm"), 
         legend.background = element_rect(fill = "transparent"))
 p.2  
@@ -345,7 +348,7 @@ p.2.leg <- ggplot(empty, aes(x=x, y=y))+
   geom_text(aes(x = c(0.15, 0.65),
                 y = c(0.5,0.5),
                 label = lab),
-            size=4,
+            size=7,
             color = "black",
             angle = 90,
             family = "Times New Roman") +
@@ -383,6 +386,7 @@ p
 
 ggsave("figure/Figure_6.png",
        p,
-       width = 13,
-       height = 7,
-       dpi = 300)
+       width = 18,
+       height = 12,
+       dpi = 600)
+

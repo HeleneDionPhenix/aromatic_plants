@@ -74,12 +74,13 @@ p.eff <- ggplot(newdat,
   annotate("text",
            x = 9,
            y = 0.1,
+           size = 5,
           label = paste("R2=",
                         round(rpt.trt$R$Fixed, 2),
                         sep = ""),
           family = "Times New Roman") +
   
-  theme_classic(base_size = 14,
+  theme_classic(base_size = 16,
                 base_family = "Times New Roman") +
   xlab("") + 
   ylim(0,6) +
@@ -126,7 +127,7 @@ p.raw <- ggplot(newdat,
                      values = c(prebrood = "#F2BB05",
                                 brood = "#D74E09",
                                 breed = "#6E0E0A")) +
-  theme_classic(base_size = 14,
+  theme_classic(base_size = 16,
                 base_family = "Times New Roman") +
   xlab("") + 
   scale_x_discrete(labels = c(("Control"), 
@@ -143,18 +144,19 @@ p.raw <- ggplot(newdat,
   theme(legend.title = element_blank(),
         legend.position = c(0.85, 0.20),
         legend.background = element_rect(color = "transparent"),
-        axis.text.x = element_text(size = 12, angle = 45, hjust = 1))
+        legend.text = element_text(size = 16),
+        axis.text.x = element_text(size = 16, angle = 45, hjust = 1))
 
 p.raw
 
 p <- ggarrange(p.eff, p.raw,
                ncol = 1,
-               heights = c(5,8.5),
+               heights = c(5,8),
                labels = c("A", "B"))
 p
 
 ggsave("figure/Figure_2.png",
   p,
-  width = 6,
-  height = 8,
+  width = 8.5,
+  height = 9,
   dpi = 300)

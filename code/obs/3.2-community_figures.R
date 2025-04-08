@@ -10,6 +10,7 @@
 library(dplyr)
 library(vegan)
 library(ggplot2)
+library(ggpubr)
 
 # Import data -------------------------------------------------------------
 
@@ -116,6 +117,6 @@ p.compo
 
 ggsave("figure/Figure_5.png",
        p.compo,
-       width = 9.5,
-       height = 7,
+       width = 8.5,
+       height = 8,
        dpi = 300)
