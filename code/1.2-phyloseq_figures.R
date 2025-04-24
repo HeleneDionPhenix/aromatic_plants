@@ -936,7 +936,7 @@ ggsave("figure/Figure_S2.6.png",
        p.pcr.all,
        dpi = 300,
        width = 15,
-       height = 10)
+       height = 8)
 
 
 # SECTION 3 ---------------------------------------------------------------

@@ -388,5 +388,5 @@ ggsave("figure/Figure_6.png",
        p,
        width = 18,
        height = 12,
-       dpi = 600)
+       dpi = 400)
 
